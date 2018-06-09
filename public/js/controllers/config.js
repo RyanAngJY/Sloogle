@@ -7,6 +7,7 @@
 angular.module('sloogle').controller('ConfigCtrl', function ($scope, ConfigService) {
 	
 	var currentPage = 1;
+	var totalPages = 0;
 	
 	ConfigService.get().then(function (response) {
     	console.log(response)
@@ -24,11 +25,14 @@ angular.module('sloogle').controller('ConfigCtrl', function ($scope, ConfigServi
 	    })
 	    .done(function(data) {
 	    	$scope.imageData = data;
+	    	totalPages = data.total_pages;
+	    	console.log(totalPages)
 	    	$scope.$digest();
 	    	console.log(data);
 	    })
 	    .fail(function(err) {
-	    	alert("failed!")
+	    	totalPages = 0;
+	    	alert("No search!")
 	    })
     }
     
@@ -39,7 +43,9 @@ angular.module('sloogle').controller('ConfigCtrl', function ($scope, ConfigServi
     }
     
     $scope.nextPage = function() {
-    	$scope.searchForImages(currentPage + 1)
+    	if (totalPages > currentPage) {
+    		$scope.searchForImages(currentPage + 1)
+    	}
     }
 
 });
