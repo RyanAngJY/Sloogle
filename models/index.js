@@ -6,10 +6,10 @@ var fs = require('fs'),
     db = {};
 
 
-var sequelize = new Sequelize(config.db.name, config.db.username, config.db.password, {
+var sequelize = new Sequelize(process.env.DATABASE_URL, {
     dialect: 'postgres',
-    host: 'localhost',
-    port: 35729,
+    host: config.db.host,
+    port: config.db.port,
     logging: config.db.logging || console.log,
     dialectOptions: {
         ssl: true
@@ -19,7 +19,6 @@ var sequelize = new Sequelize(config.db.name, config.db.username, config.db.pass
 db = {
     VideoInfo: sequelize.import('./videoInfo')
 }
-
 
 fs.readdirSync(__dirname).filter(function (file) {
     return (file.indexOf('.') !== 0) && (file !== 'index.js') && (file !== 'README.md');
