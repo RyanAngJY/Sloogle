@@ -1,11 +1,37 @@
 <!-- Example Template -->
-<h1>App Name: {{config.name}}</h1>
-<h1>Description: {{config.description}}</h1>
-<h1>Version: {{config.version}}</h1>
-
-<input type="text" ng-model="search">
-{{ search }}
-<button ng-click="searchForImages()">Hello</button>
-
-
-<p>&copy;2016 Sloogle Inc.</p>
+<div class="container">
+<div class="row">
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="jumbotron header">
+                <h1>{{config.name}}</h1>
+                <h3>{{config.description}}</h3>
+                
+                <form ng-submit="searchForImages(1)">
+                    <input type="text" ng-model="search">
+                    <button type="submit" class="btn btn-dark">Search</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div ng-repeat="image in imageData.results" class="col-md-4 col-sm-6">
+                <div class="col-md-8">
+                    <a target="_blank" href="{{ image.urls.full }}" class="thumbnail">
+                        <img src="{{ image.urls.regular }}" class="sloogle-image">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <button ng-click="likeImage()" type="button" class="btn btn-success">Like!</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="center-div">
+                <button ng-click="previousPage()" type="button" class="btn btn-warning">Prev</button>
+                <button ng-click="nextPage()" type="button" class="btn btn-warning">Next</button>
+                <p>&copy;2016 Sloogle Inc.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

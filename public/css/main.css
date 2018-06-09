@@ -5,3 +5,16 @@
 body {
     background: #fff;
 }
+
+.sloogle-image {
+    height: 200px !important;
+}
+
+.header {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.center-div {
+    text-align: center
+}
