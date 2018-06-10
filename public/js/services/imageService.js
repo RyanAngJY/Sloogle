@@ -1,8 +1,12 @@
 'use strict';
 
-angular.module('sloogle').factory('ConfigService', function ($http) {
+angular.module('sloogle').factory('ImageService', function ($http) {
     var service = {};
 
+    service.getApiKey = function () {
+        return $http.get('/api/key/');
+    };
+    
     service.get = function (imageID) {
         return $http.get('/api/config/' + imageID);
     };

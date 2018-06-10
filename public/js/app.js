@@ -12,8 +12,8 @@ angular.module('sloogle', [
 
     $stateProvider
         .state('main', {
-            templateUrl: '/public/views/config.html',
+            templateUrl: '/public/views/index.html',
             url: '/',
-            controller: 'ConfigCtrl',
+            controller: 'AppCtrl',
         });
 });

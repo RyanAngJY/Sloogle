@@ -8,13 +8,16 @@
 'use strict';
 
 module.exports = function (app) {
-    var configController = require('./controllers/config.js');
+    var imageController = require('./controllers/imageServerController.js');
 
+    app.route('/api/key')
+        .get(imageController.getApiKey);
+        
     app.route('/api/config')
-        .post(configController.post);
+        .post(imageController.post);
         
     app.route('/api/config/:id')
-        .get(configController.get);
+        .get(imageController.get);
 
     app.route('/').get(function(req, res){
         res.render('index.ejs');

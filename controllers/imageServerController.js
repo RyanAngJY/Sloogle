@@ -1,7 +1,10 @@
 'use strict';
 
-// SAMPLE CONTROLLER
 var ImageInfo = require('../models').sequelize.models.imageinfo;
+
+exports.getApiKey = function(req, res) {
+    res.json({ 'unsplashApiKey' : process.env.UNSPLASH_API_KEY })
+}
 
 exports.get = function (req, res) {
     ImageInfo.find({ where: {image_id: req.params.id} }).then(imageInfo => {
