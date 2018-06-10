@@ -11,7 +11,8 @@ module.exports = function (app) {
     var configController = require('./controllers/config.js');
 
     app.route('/api/config')
-        .get(configController.get);
+        .get(configController.get)
+        .post(configController.post);
 
     app.route('/').get(function(req, res){
         res.render('index.ejs');

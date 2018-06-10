@@ -5,7 +5,6 @@ var fs = require('fs'),
     config = require('../config.js'),
     db = {};
 
-
 var sequelize = new Sequelize(process.env.DATABASE_URL, {
     dialect: 'postgres',
     host: config.db.host,

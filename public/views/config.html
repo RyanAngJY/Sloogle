@@ -13,15 +13,15 @@
                 </form>
             </div>
         </div>
-        <div class="row">
-            <div ng-repeat="image in imageData.results" class="col-md-4 col-sm-6">
+        <div class="row" ng-init="searchForImages(1)">
+            <div ng-repeat="image in imageData.results | limitTo:9" class="col-md-4 col-sm-6">
                 <div class="col-md-8">
                     <a target="_blank" href="{{ image.urls.full }}" class="thumbnail">
                         <img src="{{ image.urls.regular }}" class="sloogle-image">
                     </a>
                 </div>
                 <div class="col-md-4">
-                    <button ng-click="likeImage()" type="button" class="btn btn-success">Like!</button>
+                    <button ng-click="likeImage(image.id)" type="submit" class="btn btn-success">Like!</button>
                 </div>
             </div>
         </div>

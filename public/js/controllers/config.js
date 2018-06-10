@@ -5,7 +5,6 @@
 'use strict';
 
 angular.module('sloogle').controller('ConfigCtrl', function ($scope, ConfigService) {
-	
 	var currentPage = 1;
 	var totalPages = 0;
 	
@@ -13,7 +12,7 @@ angular.module('sloogle').controller('ConfigCtrl', function ($scope, ConfigServi
     	console.log(response)
         $scope.config = response.data;
     });
-    
+
     $scope.searchForImages = function(number) {
     	currentPage = number;
     	var searchTerm = $scope.search;
@@ -34,6 +33,15 @@ angular.module('sloogle').controller('ConfigCtrl', function ($scope, ConfigServi
 	    	totalPages = 0;
 	    	alert("No search!")
 	    })
+    }
+    
+    $scope.likeImage = function(imageID) {
+    	console.log("liked!")
+    	console.log(imageID)
+    	
+    	ConfigService.post(imageID).then(function (response) {
+	    	console.log("RESPONSE = " + response)
+	    });
     }
     
     $scope.previousPage = function() {
