@@ -11,7 +11,6 @@ exports.get = function (req, res) {
             res.json({ 'likes' : imageInfo.likes });
         }
     })
-	
 };
 
 exports.post = function (req, res) {

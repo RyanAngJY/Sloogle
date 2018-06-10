@@ -3,11 +3,93 @@
 */
 
 body {
-    background: #fff;
+    background: #fffdfa;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 0;
+    margin: 0;
 }
 
-.sloogle-image {
-    height: 200px !important;
+button {
+    border: none;
+    background-color: none;
+}
+
+
+.sloogle-header {
+    text-align: center;
+    padding: 70px 0;
+    margin-bottom: 30px;
+    color: #f9f7f6;
+    background-image: url(https://images.unsplash.com/photo-1502613374390-8da7aa532177?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=77888f4dddbbbfc4cb9b96573f529fea&auto=format&fit=crop&w=2252&q=80);
+}
+
+.sloogle-header h1 {
+    font-size: 110px;
+    letter-spacing: 10px;
+    margin-bottom: 30px;
+}
+
+.sloogle-header h3 {
+    font-size: 15px;
+    color: #c1c1c1;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-transform: uppercase
+}
+
+/*Search Bar*/
+.search-bar {
+    width: 20%;
+    padding: 5px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    color: black;
+}
+
+.search-btn {
+    border-radius: 0;
+    transition: all 0.2s ease-in-out;
+    letter-spacing: 1px;
+    color: #e4e2e2;
+    font-size: 12px;
+    padding: 5px;
+    background-color: #26262a;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.search-btn:hover {
+    color: #26262a;
+    background-color: #e4e2e2;
+}
+
+.thumbnailContainer {
+    border-bottom: 1px solid #33333312;
+    overflow: auto;
+    padding-bottom: 10px;
+    margin-bottom: 20px
+}
+
+.imageContainer {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 4px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.imageContainer:hover {
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+	-moz-box-shadow: 0 10px 6px -6px #777;
+	box-shadow: 0 10px 6px -6px #777;
+	transform: scale(1.1);
+}
+
+.imageContainer img {
+    height: 100%;
 }
 
 .header {
@@ -17,4 +99,34 @@ body {
 
 .center-div {
     text-align: center
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.likes-count {
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.like-btn {
+    border: 1px solid #3e0101bd;
+    height: 34px;
+    width: 54px;
+    text-align: center;
+    color: #9c0909bd;
+    transition: all 0.2s ease-in-out;
+    text-transform: uppercase;
+}
+
+.like-btn:hover {
+    color: #fffdfa;
+    background-color: #9c0909bd;
+    border: none;
+}
+
+.disabled-btn {
+    color: grey;
+    cursor: not-allowed;
 }

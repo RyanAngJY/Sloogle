@@ -1,11 +1,11 @@
 'use strict';
 
 angular.module('sloogle').controller('ConfigCtrl', function ($scope, ConfigService) {
-	var currentPage = 1;
-	var totalPages = 0;
+	$scope.currentPage = 1;
+	$scope.totalPages = 0;
 
     $scope.searchForImages = function(number) {
-    	currentPage = number;
+    	$scope.currentPage = number;
     	var searchTerm = $scope.search;
     	$.ajax({
 	    	method: "GET",
@@ -14,12 +14,13 @@ angular.module('sloogle').controller('ConfigCtrl', function ($scope, ConfigServi
 	    	datatype: 'json'
 	    })
 	    .done(function(data) {
+	    	$scope.totalPages = data.total_pages;
 	    	$scope.imageData = data;
 	    	$scope.getImageLikes(data.results);
 	    	$scope.$digest();
 	    })
 	    .fail(function(err) {
-	    	totalPages = 0;
+	    	$scope.totalPages = 0;
 	    })
     }
     
@@ -38,14 +39,14 @@ angular.module('sloogle').controller('ConfigCtrl', function ($scope, ConfigServi
     }
     
     $scope.previousPage = function() {
-    	if (currentPage > 1) {
-    		$scope.searchForImages(currentPage - 1)
+    	if ($scope.currentPage > 1) {
+    		$scope.searchForImages($scope.currentPage - 1)
     	}
     }
     
     $scope.nextPage = function() {
-    	if (totalPages > currentPage) {
-    		$scope.searchForImages(currentPage + 1)
+    	if ($scope.totalPages > $scope.currentPage) {
+    		$scope.searchForImages($scope.currentPage + 1)
     	}
     }
 
