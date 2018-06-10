@@ -19,7 +19,7 @@ require('./routes')(app);
 
 //Connect to Postgres DB & sync models
 db.sequelize
-    .sync({ force: true })
+    .sync()
     .then(function () {
         // Start server
         console.log("Success")

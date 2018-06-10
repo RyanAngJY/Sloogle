@@ -16,7 +16,7 @@ var sequelize = new Sequelize(process.env.DATABASE_URL, {
 });
 
 db = {
-    VideoInfo: sequelize.import('./videoInfo')
+    ImageInfo: sequelize.import('./imageInfo')
 }
 
 fs.readdirSync(__dirname).filter(function (file) {

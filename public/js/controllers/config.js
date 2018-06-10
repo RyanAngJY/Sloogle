@@ -7,11 +7,6 @@
 angular.module('sloogle').controller('ConfigCtrl', function ($scope, ConfigService) {
 	var currentPage = 1;
 	var totalPages = 0;
-	
-	ConfigService.get().then(function (response) {
-    	console.log(response)
-        $scope.config = response.data;
-    });
 
     $scope.searchForImages = function(number) {
     	currentPage = number;
@@ -24,10 +19,8 @@ angular.module('sloogle').controller('ConfigCtrl', function ($scope, ConfigServi
 	    })
 	    .done(function(data) {
 	    	$scope.imageData = data;
-	    	totalPages = data.total_pages;
-	    	console.log(totalPages)
+	    	$scope.getImageLikes(data.results);
 	    	$scope.$digest();
-	    	console.log(data);
 	    })
 	    .fail(function(err) {
 	    	totalPages = 0;
@@ -35,12 +28,17 @@ angular.module('sloogle').controller('ConfigCtrl', function ($scope, ConfigServi
 	    })
     }
     
+    $scope.getImageLikes = function(imagesData) {
+    	imagesData.forEach(function(imageData) {
+    		ConfigService.get(imageData.id).then(function (response) {
+    			$scope.imageData[imageData.id] = response.data.likes
+    		})
+    	})
+    }
+    
     $scope.likeImage = function(imageID) {
-    	console.log("liked!")
-    	console.log(imageID)
-    	
     	ConfigService.post(imageID).then(function (response) {
-	    	console.log("RESPONSE = " + response)
+	    	$scope.imageData[imageID] = response.data.likes
 	    });
     }
     
