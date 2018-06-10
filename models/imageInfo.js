@@ -4,7 +4,5 @@ module.exports = function(sequelize, DataTypes) {
 		likes: DataTypes.INTEGER
 	});
 
-	// VideoInfo.associate = (models) => {};
-
 	return ImageInfo;
 };

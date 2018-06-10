@@ -3,18 +3,7 @@
 // SAMPLE CONTROLLER
 var ImageInfo = require('../models').sequelize.models.imageinfo;
 
-/**
- * Module dependencies.
- */
-
-var config = require('../config');
-
-/**
- * Get current configuration
- */
 exports.get = function (req, res) {
-    console.log("GET REQUEST");
-    console.log(req.params);
     ImageInfo.find({ where: {image_id: req.params.id} }).then(imageInfo => {
         if (imageInfo === null) {
             res.json({ 'likes' : 0 });
@@ -26,7 +15,6 @@ exports.get = function (req, res) {
 };
 
 exports.post = function (req, res) {
-    console.log("========================================================")
     ImageInfo.find({ where: {image_id: req.body.image_id} }).then(imageInfo => {
         if (imageInfo === null) {   // create new key
             ImageInfo.create({

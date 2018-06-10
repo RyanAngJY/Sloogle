@@ -22,7 +22,6 @@ db.sequelize
     .sync()
     .then(function () {
         // Start server
-        console.log("Success")
         app.listen(config.port);
     }, function (err) {
         console.error(err);

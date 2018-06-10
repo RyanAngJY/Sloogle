@@ -1,7 +1,3 @@
-/**
- * Example Controller
- */
-
 'use strict';
 
 angular.module('sloogle').controller('ConfigCtrl', function ($scope, ConfigService) {
@@ -24,7 +20,6 @@ angular.module('sloogle').controller('ConfigCtrl', function ($scope, ConfigServi
 	    })
 	    .fail(function(err) {
 	    	totalPages = 0;
-	    	alert("No search!")
 	    })
     }
     
