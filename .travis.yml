@@ -1,6 +1,9 @@
 language: node_js
 node_js:
-  - "stable"
+- stable
 cache:
   directories:
-    - "node_modules"
+  - node_modules
+deploy:
+  api_key:
+    secure: karEi+fbfZnpdRIStSGostJgx+4kkEZG4V0cIHdv/yHuA86i9OVEU/8H+3ATy6g0mfn+BtImAVsKdosxExLF970kXzX8v2j1Rpskts0jlWVGYPmivpTVXSpy7KVGjMEXRnuq2xu1ZbBvKxG2J/rVrdXb06OyeU//Nd/7z9o5R+zZOoralsegTKcnl//8ECIwWvjRWE2+FuN/zMZRJo5VeSQACaT/Uc1DlqjVPSqVbsC7IcH340gJ4tTB9kT+iZ72BUrh7hri1p+l3OqDn1PuMxI2hSYVCgvGWaxf9cKvcSX95P6XigPiyeU30kmCAI9W5E9pzNGcYC9FXoFqRquAxqK/w5l/3J9etkl8p6zjFrmqbxgExwBCxMUbvT/Vc2t4a5p5WPS1up1srpg68yjVBOe/Xr1ZeJtyR5SDdkYgCk2hDAIaYF8IemhCvID1coU1LMCQuCIpyigpktxWFEjKVAVpxtlTo/r4bKbVLpNI9LB7JI7OpcThkiNlAR1MtoOkKUqpEjxV5G11013Skx0R5rIeSukHg41Rqm3JfGuGQyqzHYh4qf2SJDWoHOslyCEagNp+fcap9dRWPh+aeVgqNScScr/nSXaAeWKZeDyAsgwpxU+6RzKpi6xnExa9JdoSrGhXbhBaTto8xIXXm8j/sMXedxHYoYndqFLyB+rFC1s=
