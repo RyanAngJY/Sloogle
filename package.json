@@ -4,7 +4,8 @@
   "description": "Unsplash search engine & code challenge",
   "main": "server.js",
   "scripts": {
-    "start": "node_modules/.bin/gulp server"
+    "start": "node server.js",
+    "dev": "node_modules/.bin/gulp server"
   },
   "author": "TritonWear",
   "license": "MIT",
