@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Unsplash search engine & code challenge",
   "main": "server.js",
+  "engines": {
+    "node": "8.11.3",
+    "npm": "5.x"
+  },
   "scripts": {
     "start": "node server.js",
     "dev": "node_modules/.bin/gulp server"
