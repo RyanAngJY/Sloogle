@@ -6,6 +6,5 @@ cache:
   - node_modules
 deploy:
   provider: heroku
-  api_key:
-    secure: "J93LhYVV/Ov8k89V3mWvBQ30bao4OTKdaPeTGRMGorZnV25KYbj+Io4sSjOnuOxtQZ508j6xw07k/xrdK8zKiYyGKMBURvnWz9VNGjY3Q29aZ/2nBmgKnfhfpHtv9hM5Mocj94GSzXdwJq08hR3e76dUgisWsEXMfyA7ZNv1hV9jdPt/yd2wFe7o92X8a7vvriURt9YwES8Nsr/Ehs1wvS/mMSEmSaSWVBg4tKQYHkyIgOcdu5Mj7k//dgd/jmuImqoJXNpcXp+4b0tvMYtNLgFAlvr8T2uGeN/xEc2Ym9B/eqnEgg+0K1KtlGc3rc0Vx2RlgC3iqM13wrFe6fVCWlkywkn00nQNolTm4HI8DiIKMxYLOOvbA4FOgHW8VJp0FMAtxqg9uCZNkEw2Kl40pxQRA+b9nqxGm8zm44IP/nmcu1OU5vXSbbjpDNGT/MgR7fId/r2juzdfDXYGxyc53T5w3lhcVNubS6LZPIxeIPMal6VKARzUbG36o1L7ginu1RFOEpRlZNywGt+M/9yOem7Z9Dv8CZI3Qo4oSW555+5XaWqOOidn96T1AHEVjzauj6HELQk01Ksd1BXjy6hI2FRZ068eRHCcymwYH+8KP8sxevTuzWQm5M/jg2fWneB5tKNSME9Vc++xz2Qe8rPVXOyfsi3brINncM6hFWamLIQ="
+  api_key: 7836c2a5-b3ef-4886-9c2d-0199a2ba19c2
   app: cryptic-everglades-24336
