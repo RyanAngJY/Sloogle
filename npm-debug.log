@@ -1,7 +1,5 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/home/ubuntu/.nvm/versions/node/v6.11.2/bin/node',
-1 verbose cli   '/home/ubuntu/.nvm/versions/node/v6.11.2/bin/npm',
-1 verbose cli   'start' ]
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'start' ]
 2 info using npm@3.10.10
 3 info using node@v6.11.2
 4 verbose run-script [ 'prestart', 'start', 'poststart' ]
@@ -9,25 +7,25 @@
 6 silly lifecycle Sloogle@1.0.0~prestart: no script for prestart, continuing
 7 info lifecycle Sloogle@1.0.0~start: Sloogle@1.0.0
 8 verbose lifecycle Sloogle@1.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle Sloogle@1.0.0~start: PATH: /home/ubuntu/.nvm/versions/node/v6.11.2/lib/node_modules/npm/bin/node-gyp-bin:/home/ubuntu/workspace/node_modules/.bin:/home/ubuntu/.nvm/versions/node/v6.11.2/bin:/usr/local/rvm/gems/ruby-2.4.0/bin:/usr/local/rvm/gems/ruby-2.4.0@global/bin:/usr/local/rvm/rubies/ruby-2.4.0/bin:/mnt/shared/bin:/home/ubuntu/workspace/node_modules/.bin:/home/ubuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/mnt/shared/sbin:/opt/gitl:/opt/go/bin:/mnt/shared/c9/app.nw/bin:/usr/local/rvm/bin
-10 verbose lifecycle Sloogle@1.0.0~start: CWD: /home/ubuntu/workspace
+9 verbose lifecycle Sloogle@1.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/administrator/Documents/GitHub/Projects/Sloogle/node_modules/.bin:/anaconda3/bin://anaconda/bin:/Library/Frameworks/Python.framework/Versions/3.4/bin:/Library/Frameworks/Python.framework/Versions/3.5/bin:/Library/Frameworks/Python.framework/Versions/3.5/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Applications/Wireshark.app/Contents/MacOS:/anaconda3/bin://anaconda/bin:/Library/Frameworks/Python.framework/Versions/3.4/bin:/Library/Frameworks/Python.framework/Versions/3.5/bin:/Library/Android/sdk/tools/bin:/Library/Android/sdk/tools://Users/administrator/Documents/School Stuff/MISC/Testing/Maven/apache-maven-3.5.4/bin:/usr/local/mysql/bin/:/Library/Android/sdk/tools/bin:/Library/Android/sdk/tools://Users/administrator/Documents/School Stuff/MISC/Testing/Maven/apache-maven-3.5.4/bin:/usr/local/mysql/bin/
+10 verbose lifecycle Sloogle@1.0.0~start: CWD: /Users/administrator/Documents/GitHub/Projects/Sloogle
 11 silly lifecycle Sloogle@1.0.0~start: Args: [ '-c', 'node server.js' ]
 12 silly lifecycle Sloogle@1.0.0~start: Returned: code: 1  signal: null
 13 info lifecycle Sloogle@1.0.0~start: Failed to exec start script
 14 verbose stack Error: Sloogle@1.0.0 start: `node server.js`
 14 verbose stack Exit status 1
-14 verbose stack     at EventEmitter.<anonymous> (/home/ubuntu/.nvm/versions/node/v6.11.2/lib/node_modules/npm/lib/utils/lifecycle.js:255:16)
+14 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:255:16)
 14 verbose stack     at emitTwo (events.js:106:13)
 14 verbose stack     at EventEmitter.emit (events.js:191:7)
-14 verbose stack     at ChildProcess.<anonymous> (/home/ubuntu/.nvm/versions/node/v6.11.2/lib/node_modules/npm/lib/utils/spawn.js:40:14)
+14 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:40:14)
 14 verbose stack     at emitTwo (events.js:106:13)
 14 verbose stack     at ChildProcess.emit (events.js:191:7)
 14 verbose stack     at maybeClose (internal/child_process.js:891:16)
 14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
 15 verbose pkgid Sloogle@1.0.0
-16 verbose cwd /home/ubuntu/workspace
-17 error Linux 4.9.80-c9
-18 error argv "/home/ubuntu/.nvm/versions/node/v6.11.2/bin/node" "/home/ubuntu/.nvm/versions/node/v6.11.2/bin/npm" "start"
+16 verbose cwd /Users/administrator/Documents/GitHub/Projects/Sloogle
+17 error Darwin 18.2.0
+18 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "start"
 19 error node v6.11.2
 20 error npm  v3.10.10
 21 error code ELIFECYCLE
