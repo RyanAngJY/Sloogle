@@ -1,11 +1,13 @@
 <div class="sloogle-header">
-    <h1>Sloogle</h1>
+    <h1>Slooglee</h1>
     <h3>A Search Engine for Images</h3>
-    
+
     <div class="row">
         <form ng-submit="searchForImages(1)">
             <input type="text" ng-model="search" class="search-bar" placeholder="Search images">
-            <button type="submit" class="btn search-btn"><ion-icon name="search" size="small"></ion-icon></button>
+            <button type="submit" class="btn search-btn">
+                <ion-icon name="search" size="small"></ion-icon>
+            </button>
         </form>
     </div>
 </div>
@@ -22,10 +24,12 @@
                                 </a>
                             </div>
                         </div>
-                    
+
                         <div class="col-sm-3 no-padding">
                             <p class="likes-count" ng-show="imageData[image.id]">{{ imageData[image.id] }} Likes</p>
-                            <button ng-click="likeImage(image.id)" type="submit" class="btn like-btn"><ion-icon name="heart" size="small"></ion-icon></button>
+                            <button ng-click="likeImage(image.id)" type="submit" class="btn like-btn">
+                                <ion-icon name="heart" size="small"></ion-icon>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -33,9 +37,15 @@
             <div class="row">
                 <div class="center-div">
                     <p>
-                    <button ng-class="{'disabled-btn': (currentPage <= 1)}" ng-disabled="currentPage <= 1" ng-click="previousPage()" type="button"><ion-icon name="arrow-dropleft" size="small"></ion-icon></button>
-                    {{ currentPage }} / {{ totalPages }}
-                    <button ng-class="{'disabled-btn': (totalPages <= currentPage)}" ng-disabled="totalPages <= currentPage" ng-click="nextPage()" type="button"><ion-icon name="arrow-dropright" size="small"></ion-icon></button>
+                        <button ng-class="{'disabled-btn': (currentPage <= 1)}" ng-disabled="currentPage <= 1" ng-click="previousPage()"
+                            type="button">
+                            <ion-icon name="arrow-dropleft" size="small"></ion-icon>
+                        </button>
+                        {{ currentPage }} / {{ totalPages }}
+                        <button ng-class="{'disabled-btn': (totalPages <= currentPage)}" ng-disabled="totalPages <= currentPage"
+                            ng-click="nextPage()" type="button">
+                            <ion-icon name="arrow-dropright" size="small"></ion-icon>
+                        </button>
                     </p>
                     <p>&copy;2016 Sloogle Inc.</p>
                 </div>
