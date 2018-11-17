@@ -4,8 +4,8 @@ var config = require('./config');
 var bodyParser = require("body-parser");
 var db = require('./models');
 
-app.use(require('connect-livereload')());
-app.use(bodyParser.urlencoded({extended: true}));
+// app.use(require('connect-livereload')());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // allow serving of static files (ie in public)
 app.use('/public', express.static(__dirname + '/public'));
